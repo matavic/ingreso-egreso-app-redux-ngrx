@@ -1,8 +1,13 @@
 import * as fromIE from "./ingreso-egreso.actions";
 import { IngresoEgreso } from './ingreso-egreso.model';
+import { AppState } from '../app.reducer';
 
 export interface IngresoEgresoState {
     items: IngresoEgreso[]
+}
+
+export interface AppStateWithIE extends AppState {
+    ingresoEgreso: IngresoEgresoState
 }
 
 const initState: IngresoEgresoState = {
